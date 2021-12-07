@@ -1,0 +1,25 @@
+schema {
+  query: QueryResolver
+}
+
+type QueryResolver {
+    newsList: [News]
+    news(id: ID!): News!
+}
+
+type News {
+    id: ID!
+    title: String!
+    description: String!
+    link:String!
+}
+
+input NewsFilter {
+  title: FilterField
+}
+
+input FilterField {
+  operator: String!
+  value: String!
+}
+
