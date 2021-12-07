@@ -19,13 +19,14 @@ public class News {
 	private Long id;
 	private String title;
 	private String description;
-	private Date publicationData;
+	private Date publicationDate;
 	private String link;
 
-	public News(String title, String description,  String link) {
+	public News(String title, String description,  String link, Date publicationDate) {
 		this.title = title;
 		this.description = description;
 		this.link = link;
+		this.publicationDate = publicationDate;
 	}
 
 	public String getTitle() {
@@ -44,11 +45,11 @@ public class News {
 		this.description = description;
 	}
 
-	public Date getPublicationData() {
-		return publicationData;
+	public Date getPublicationDate() {
+		return publicationDate;
 	}
 
 	public void setPublicationData(Date publicationData) {
-		this.publicationData = publicationData;
+		this.publicationDate = publicationDate;
 	}
 }
