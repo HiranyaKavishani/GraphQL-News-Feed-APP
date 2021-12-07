@@ -18,13 +18,11 @@ import newsfeed.spring.graphql.repository.NewsRepository;
 
 import java.io.IOException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /*
- * a sample scheduled task. Spring scheduled is not cluster-friendly. If you are running a cluster
  *  you have to enable scheduling in one app instance and disable it in all others. (see application.yml)
  */
 @Service
@@ -41,8 +39,6 @@ public class NewsPullerScheduledTask {
 
 	@Autowired
 	private NewsRepository feedRepository;
-
-	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 	private final AtomicInteger count = new AtomicInteger(0);
 
 	@Scheduled(fixedRate = 60000*5)  // every 5 minutes
