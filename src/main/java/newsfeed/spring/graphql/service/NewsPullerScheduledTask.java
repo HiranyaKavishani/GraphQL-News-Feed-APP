@@ -45,7 +45,7 @@ public class NewsPullerScheduledTask {
 	private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 	private final AtomicInteger count = new AtomicInteger(0);
 
-	@Scheduled(fixedRate = 30000)  // every 5 minutes
+	@Scheduled(fixedRate = 60000*5)  // every 5 minutes
 	public void pullNewsData() {
 		this.count.incrementAndGet();
 		if (!scheduledJobEnabled) {

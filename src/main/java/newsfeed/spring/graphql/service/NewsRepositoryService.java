@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Customized repository for the Topic entity
  * 
- * @author Andrés Guerrero <aoguerrero@gmail.com>
+ * @author Hiranya Abeyrathne <hiranyakavi@gmail.com>
  *
  */
 @Repository
@@ -27,7 +27,7 @@ public class NewsRepositoryService {
 	public List<News> getNewsFeeds() {
 
 		List<Object[]> results = entityManager.createQuery(
-				"SELECT id, title, description, link FROM Feed", Object[].class).
+				"SELECT id, title, description, link FROM NewsFeed", Object[].class).
 				setMaxResults(Integer.valueOf(news)).getResultList();
 		List<News> newsFeedList = new ArrayList<>();
 		for (Object[] result : results) {
