@@ -22,7 +22,7 @@ Also project has been included rest endpoint to receive the news items informati
 Clone the repository:
 
 ````bash
-git clone https://github.com/HiranyaKavishani/GraphQL-News-Feed-APP.git
+git clone https://github.com/HiranyaKavishani/graphql-news-app-kickstart.git
 ````
 
 Get into the created directory
